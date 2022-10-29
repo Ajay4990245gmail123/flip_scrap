@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+    <link href="static/result.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>RESULTS</h1>
+    <div>
+        <table>
+            <tr>
+                <th>product</th>
+                <th>user_name</th>
+                <th>rating</th>
+                <th>price</th>
+                <th>h_comment</th>
+                <th>comment</th>
+            </tr>
+            {%for review in review%}
+            <tr class=tab>
+                <td>
+                    {{review['product']}}
+                </td>
+                <td>
+                    {{review['user_name']}}
+                </td>
+                <td>
+                    {{review['rating']}}
+                </td>
+                <td>
+                    {{review['price']}}
+                </td>
+                <td>
+                    {{review['h_comment']}}
+                </td>
+                <td>
+                    {{review['comment']}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
